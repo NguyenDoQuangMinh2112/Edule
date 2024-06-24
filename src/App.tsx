@@ -1,5 +1,10 @@
+import Header from './layouts/components/Navbar/Navbar'
 function App() {
-  return <>Hello</>;
+  return (
+    <div>
+      <Header />
+    </div>
+  )
 }
 
-export default App;
+export default App

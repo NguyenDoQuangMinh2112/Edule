@@ -1,0 +1,26 @@
+.wrapper{
+    background-color: transparent;
+    color: #333;
+    cursor: pointer;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-right: 16px;
+    padding: 8px;
+
+    .title{
+        color:black
+    }
+}
+
+
+
+// Button sizes
+.small {
+    min-width: 88px;
+    padding: 4px 16px;
+}
+
+.large {
+    padding: 14px 16px;
+    min-width: 140px;
+}

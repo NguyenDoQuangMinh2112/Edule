@@ -6,7 +6,7 @@ module.exports = {
   parser: '@typescript-eslint/parser',
   plugins: ['react-refresh'],
   rules: {
-    'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
+    // 'react-refresh/only-export-components': ['warn', { allowConstantExport: true }],
     'no-console': 1,
     'no-lonely-if': 1, //declare variable without using
     'no-unused-vars': 1,

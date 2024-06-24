@@ -1,0 +1,94 @@
+.search-result,
+.search{
+    width: 420px;
+}
+
+.search{
+    --search-boder-radius:92px;
+    --search-height:46px;
+    --search-top-spacer:9px;
+    --search-button-width:40px;
+    --search-result-color:#0000008a;
+    --search-font-small: 1.4rem;
+
+    position: relative;
+    height: var(--search-height);
+    padding-left:16px;
+    display: flex;
+    border-radius: var(--search-boder-radius);
+    border: 2px solid #e8e8e8;
+    transition: border-color .2s ease-in-out;
+
+    input{
+        flex:1;
+        height: 100%;
+        color: var(--black);
+        font-size: 1.6rem;
+        background-color: transparent;
+    }
+
+    input:not(:placeholder-shown) ~ .search-btn{
+        color:#444
+    }
+
+    &::after{
+        content:"";
+        position: absolute;
+        top: var(--search-top-spacer);
+        right:var(--search-button-width);
+        width: 1px;
+        height: calc(var(--search-height) - var(--search-top-spacer) * 2);
+        background-color: rgba(22,24,35,0.12);
+    }
+
+    &:focus-within{
+        border-color:#444;
+    }
+}
+.clear, 
+.loading{
+    color:#7c7c7c;
+    position: absolute;
+    right: calc(var(--search-button-width) + 10px);
+    background: transparent;
+    top:50%;
+    transform:translateY(-50%);
+}
+
+.search-btn{
+    width: var(--search-button-width);
+    height: 100%;
+    background-color: transparent;
+    border-top-right-radius:var(--search-boder-radius);
+    border-bottom-right-radius:var(--search-boder-radius);
+    font-size: 2rem;
+    color:#837a7a;
+}
+
+.search-header{
+    display: flex;
+    gap:10px;
+    align-items: center;
+    color:#0000008a;
+    font-size: 1.4rem;
+}
+
+.search-heading{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 24px 0 12px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid rgba(0, 0, 0, .05);
+
+
+    span{
+        color:#0000008a;
+        font-size: 1.4rem;
+        cursor: pointer;
+
+        &:hover{
+            color:red;
+        }
+    }
+}
