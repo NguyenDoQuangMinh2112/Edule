@@ -12,8 +12,12 @@ interface ButtonProps {
   disabled?: boolean
   small?: boolean
   large?: boolean
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  leftIcon?: any
   children: string
   className?: string
+  classNameIcon?: string
+  classNameTitle?: string
   onClick?: () => void
   passProps?: React.ButtonHTMLAttributes<HTMLButtonElement> | React.AnchorHTMLAttributes<HTMLAnchorElement>
 }
@@ -30,8 +34,11 @@ const Button = ({
   disabled = false,
   small = false,
   large = false,
+  leftIcon,
   children,
   className,
+  classNameTitle,
+  classNameIcon,
   onClick,
   passProps
 }: ButtonProps) => {
@@ -57,9 +64,17 @@ const Button = ({
     large
   })
 
+  const classesTitle = cx('title', {
+    [classNameTitle || '']: classNameTitle
+  })
+  const classesIcon = cx('icon', {
+    [classNameIcon || '']: classNameIcon
+  })
+
   return (
     <Comp className={classes} {...props}>
-      <span className={cx('title')}>{children}</span>
+      {leftIcon && <span className={classesIcon}>{leftIcon}</span>}
+      <span className={classesTitle}>{children}</span>
     </Comp>
   )
 }

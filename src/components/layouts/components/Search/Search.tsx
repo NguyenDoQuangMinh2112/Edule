@@ -7,6 +7,7 @@ import { FaSpinner } from 'react-icons/fa'
 import { useState } from 'react'
 
 import 'tippy.js/dist/tippy.css'
+
 import Tippy from '@tippyjs/react/headless'
 import PopperWrapper from '../Popper/PopperWrapper'
 import CourseItem from '../CourseItem/CourseItem'
@@ -15,11 +16,11 @@ const cx = classNames.bind(styles)
 
 const Search = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [searchResult, setSearchResult] = useState([1, 2])
+  const [searchResult, setSearchResult] = useState([])
   const [searchValue, setSearchValue] = useState<string | number>('')
   return (
     <Tippy
-      visible={searchResult?.length > 0}
+      visible={searchValue?.length > 0}
       interactive={true}
       render={(attrs) => (
         <div className={cx('search-result')} tabIndex={-1} {...attrs}>

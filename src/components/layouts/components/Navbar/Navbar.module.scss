@@ -33,4 +33,28 @@
         justify-content: flex-end;
         flex: 1 1;
     }
+    .fallbackAvatar{
+        font-size: 3.2px;
+        border-radius: 50%;
+        cursor: pointer;
+    }
+    .avatar{
+        border-radius: 50%;
+        height: 9em;
+        object-fit: cover;
+        width: 9em;
+        margin-left: 12px;
+    }
+    .notification_button{
+        padding: 8px;
+        cursor: pointer;
+
+        &:hover .notification{
+            color:black
+        }
+    }
+    .notification{
+        font-size: 2rem;
+        color:#707070;
+    }
 }

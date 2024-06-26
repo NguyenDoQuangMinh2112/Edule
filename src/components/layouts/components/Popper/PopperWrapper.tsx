@@ -5,10 +5,11 @@ const cx = classNames.bind(styles)
 
 type PopperWrapperProps = {
   children: ReactNode | string
+  className?: string
 }
 
-const PopperWrapper = ({ children }: PopperWrapperProps) => {
-  return <div className={cx('wrapper')}>{children}</div>
+const PopperWrapper = ({ children, className }: PopperWrapperProps) => {
+  return <div className={cx('wrapper', className)}>{children}</div>
 }
 
 export default PopperWrapper
