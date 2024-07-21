@@ -105,3 +105,14 @@
         }
     }
 }
+
+
+@media (max-width:768px){
+    .search{
+        width:100%;
+
+        input{
+            flex:2
+        }
+    }
+}

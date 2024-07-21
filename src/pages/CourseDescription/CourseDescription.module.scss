@@ -1,0 +1,56 @@
+.wrapper{
+    width: min(100% - 96px, 2400px);
+    margin-top: 24px;
+    padding: 0 44px 68px;
+    z-index: 0
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.text-content{
+    margin-top: 16px;
+    line-height: 1.6;
+    font-size: 1.4rem;
+    color: #000c;
+}
+.curriculumOfCourse{
+    padding-bottom: 4px;
+    background-color: #fff;
+
+    .headingTitle{
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+    }
+}
+
+.subHead{
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 1.4rem;
+
+    ul{
+        display: flex;
+        padding-left: 0;
+
+
+        .dot{
+            padding: 0 8px;
+            opacity: .8;
+            font-size: 1.4rem;
+            margin-top: 1px;
+            font-weight: 900;
+        }
+    }
+}
+.openMore{
+    margin-left: auto;
+    color: #f05123;
+    font-weight: 600;
+    -webkit-user-select: none;
+    user-select: none;
+}

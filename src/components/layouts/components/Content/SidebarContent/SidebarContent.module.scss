@@ -1,5 +1,14 @@
 .wrapper{
     width: min(100% - 96px, 2400px);
     margin: 0 auto;
+    margin-top: 17px;
     padding: 0 32px 0 10px;
+    z-index: 0;
+}
+.slideShow{
+    width: 100%;
+    height: 270px;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+    border-radius: 9px;
+ 
 }

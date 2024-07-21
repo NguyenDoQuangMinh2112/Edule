@@ -30,3 +30,43 @@
     padding: 14px 16px;
     min-width: 140px;
 }
+
+// rounded
+.rounded_login{
+    flex-shrink: 0;
+    padding: 9px 20px;
+    border-radius: 99px;
+    color: #fff;
+    background: linear-gradient(to right bottom, #26ffa3, #ff5117);
+    font-size: 1.4rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: opacity .25s;
+
+    .title{
+        color:#fff;
+    }
+}
+
+// rounded
+.rounded_logins{
+    // position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 44px;
+    padding-left: 16px;
+    margin-top: 12px;
+    border: 2px solid #dce0e3;
+    border-radius: 44px;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color .2s;
+
+
+    &:hover{
+        background-color: #dce0e3;
+    }
+}

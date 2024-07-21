@@ -4,7 +4,7 @@ import { IoIosCloseCircle } from 'react-icons/io'
 import { FiSearch } from 'react-icons/fi'
 import { FaSpinner } from 'react-icons/fa'
 
-import { useState } from 'react'
+import { useRef, useState } from 'react'
 
 import 'tippy.js/dist/tippy.css'
 
@@ -17,7 +17,8 @@ const cx = classNames.bind(styles)
 const Search = () => {
   // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const [searchResult, setSearchResult] = useState([])
-  const [searchValue, setSearchValue] = useState<string | number>('')
+  const [searchValue, setSearchValue] = useState<string>('')
+  const inputRef = useRef<HTMLInputElement>(null)
   return (
     <Tippy
       visible={searchValue?.length > 0}
@@ -44,13 +45,19 @@ const Search = () => {
     >
       <div className={cx('search')}>
         <input
+          ref={inputRef}
           type="text"
           value={searchValue}
           onChange={(e) => setSearchValue(e.target.value)}
           placeholder="Search course, video,..."
           spellCheck={false}
         />
-        <button className={cx('clear')}>
+        <button
+          className={cx('clear')}
+          onClick={() => {
+            setSearchValue(''), inputRef.current?.focus()
+          }}
+        >
           <IoIosCloseCircle />
         </button>
         <FaSpinner className={cx('loading')} />
