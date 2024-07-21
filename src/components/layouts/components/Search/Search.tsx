@@ -44,6 +44,9 @@ const Search = () => {
       )}
     >
       <div className={cx('search')}>
+        <button className={cx('search-btn')}>
+          <FiSearch />
+        </button>
         <input
           ref={inputRef}
           type="text"
@@ -61,10 +64,6 @@ const Search = () => {
           <IoIosCloseCircle />
         </button>
         <FaSpinner className={cx('loading')} />
-
-        <button className={cx('search-btn')}>
-          <FiSearch />
-        </button>
       </div>
     </Tippy>
   )
