@@ -57,7 +57,13 @@ const Navbar = ({ isHideSearch = false }: NavbarPropInterface) => {
             <img src={images} alt="Edule" />
           </Link>
         </div>
-        <div className={cx('body', 'd-flex-center')}>{!isHideSearch && <Search />}</div>
+        <div className={cx('body', 'd-flex-center')}>
+          {!isHideSearch && (
+            <div>
+              <Search />
+            </div>
+          )}
+        </div>
         <div className={cx('action')}>
           {user && (
             <>
@@ -80,7 +86,9 @@ const Navbar = ({ isHideSearch = false }: NavbarPropInterface) => {
             </Menu>
           ) : (
             <div className={cx('auth_action')}>
-              <Button onClick={toggleModal}>Sign up</Button>
+              <Button onClick={toggleModal} className={cx('sign-up')}>
+                Sign up
+              </Button>
               <Button className={cx('rounded_login')} onClick={toggleModal}>
                 Sign In
               </Button>

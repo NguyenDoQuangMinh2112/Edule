@@ -43,7 +43,7 @@ const Search = () => {
         </div>
       )}
     >
-      <div className={cx('search')}>
+      <div className={cx('wrapper')}>
         <button className={cx('search-btn')}>
           <FiSearch />
         </button>
